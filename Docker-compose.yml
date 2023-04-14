@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: '3.9'
+
+services:
+
+  movie_blog:
+    # image: we can take it form hub from your repo or we can use build command to take the code from local
+    build: "blog/."
+    restart: always
+    ports: 
+      - 3000:80
+#     volumes:
+#       - user2data:/root
+  
+# volumes:
+#   user2data:
+      
